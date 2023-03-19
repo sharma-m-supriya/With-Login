@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="images/social.png" />
+    <link rel="stylesheet" href="form.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body{
+        font-family: 'Inter', sans-serif;
+        margin: 0;}
+
+    </style>
+    <title>Social Moyo</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Signup</header>
+        <form action="#">
+          <input type="text" placeholder="Full name" required />
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">I accept all terms & conditions</label>
+          </div><a href="app.html">
+          <input type="submit" value="Signup" /></a>
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Login</header>
+        <form action="#">
+          <input type="text" placeholder="Email address" required />
+          <input type="password" placeholder="Password" required />
+          <a href="#">Forgot password?</a>
+          <a href="app.html">
+          <input type="submit" value="Login" /></a>
+        </form>
+      </div>
+
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+
+  </body>
+</html>
